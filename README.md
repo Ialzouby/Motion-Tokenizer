@@ -25,16 +25,6 @@ cd motion-tokenizer
 pip install -r requirements.txt
 ```
 
-### Training RQ-VAE (8-layer)
-```bash
-python train.py --model rq_vae --layers 8 --dataset humanml3d --codebook_size 1024
-```
-
-### Evaluation
-```bash
-python evaluate.py --model_path checkpoints/rq_vae_8.pth --metrics fid mpjpe
-```
-
 ## Benchmark Results
 
 ### HumanML3D Dataset
@@ -75,52 +65,6 @@ motion-tokenizer/
 - **Modular Design**: Easy to add new tokenization methods
 - **HumanML3D Focus**: Optimized for human motion representation
 
-## Training Details
-
-### RQ-VAE₈ Configuration
-- **Layers**: 8 residual quantization layers
-- **Codebook Size**: 1024 per layer
-- **Target FID**: ~0.009 on HumanML3D
-- **Architecture**: Based on MoMask with additional quantization layers
-
-### Hyperparameters
-```python
-{
-    "learning_rate": 2e-4,
-    "batch_size": 64,
-    "num_epochs": 300,
-    "commitment_loss": 0.25,
-    "quantize_dropout": 0.1
-}
-```
-
-## Usage Examples
-
-### Training Custom Model
-```python
-from models.rq_vae import RQVAETokenizer
-
-tokenizer = RQVAETokenizer(
-    input_dim=263,  # HumanML3D feature dim
-    num_layers=8,
-    codebook_size=1024
-)
-
-# Training loop
-for batch in dataloader:
-    loss = tokenizer.training_step(batch)
-    loss.backward()
-```
-
-### Tokenization
-```python
-# Encode motion to discrete tokens
-tokens = tokenizer.encode(motion_sequence)
-
-# Decode tokens back to motion
-reconstructed = tokenizer.decode(tokens)
-```
-
 ## Evaluation Metrics
 
 - **FID (Fréchet Inception Distance)**: Measures distribution similarity
@@ -136,6 +80,7 @@ reconstructed = tokenizer.decode(tokens)
 
 ## References
 
+- BAMM : Biodirectional Autoregressive Motion Model
 - MoMask: Multi-Modal Masked Modeling for Motion Generation
 - MotionLCM: Real-time Controllable Motion Generation
 - HumanML3D: 3D Human Motion-Language Dataset
