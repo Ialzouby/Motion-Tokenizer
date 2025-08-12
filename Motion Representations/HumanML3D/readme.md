@@ -1,4 +1,6 @@
 # data/skeleton.py
+
+```python
 """
 SMPL-22 skeleton definitions and joint structures
 """
@@ -46,3 +48,4 @@ SMPL22_KINEMATIC_CHAINS = [
     # Right arm: Spine2 -> RightShoulder -> RightArm -> RightForeArm -> RightHand
     [9, 14, 17, 19, 21]
 ]
+```
