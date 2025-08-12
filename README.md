@@ -41,21 +41,10 @@ pip install -r requirements.txt
 
 ```
 motion-tokenizer/
-├── models/
-│   ├── vq_vae.py          # VQ-VAE implementation
-│   ├── rq_vae.py          # Residual VQ-VAE (6/8 layers)
-│   ├── vae.py             # VAE implementation
-│   └── autoencoder.py     # Standard AE
-├── data/
-│   └── humanml3d.py       # HumanML3D data loader
-├── training/
-│   ├── train.py           # Training script
-│   └── config.py          # Configuration files
-├── evaluation/
-│   ├── evaluate.py        # Evaluation metrics
-│   └── metrics.py         # FID, MPJPE calculations
-└── utils/
-    └── motion_utils.py    # Motion processing utilities
+├── AE (MotionCM V2)/
+├── VAE (MotionCM V2)/
+├── VQ-VAE (single layer from MMM)/
+├── Residual VQ-VAE (MoMask, BAMM, DanceMosaic)/
 ```
 
 ## Key Features
