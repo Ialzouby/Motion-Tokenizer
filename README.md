@@ -15,8 +15,7 @@ This repository implements and compares multiple motion tokenization approaches:
 ## Supported Datasets
 
 - **HumanML3D** (primary)
-- **Motion-X** 
-- **HuMo100M**
+- **Kit-ML
 
 ## Quick Start
 
