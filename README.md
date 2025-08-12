@@ -2,6 +2,8 @@
 
 A comprehensive repository for training and evaluating various motion tokenization methods on human motion datasets.
 
+![Repository Structure](Misc/Motion-Tokenizer.png)
+
 ## Overview
 
 This repository implements and compares multiple motion tokenization approaches:
@@ -29,13 +31,8 @@ pip install -r requirements.txt
 
 ### HumanML3D Dataset
 
-| Model | Code Size | FID ↓ | MPJPE ↓ |
-|-------|-----------|-------|---------|
-| VQ-VAE₁ | 1024 | 0.183 | 47.54 |
-| RQ-VAE₆ | 1024 | 0.032 | 23.58 |
-| **RQ-VAE₈** | 1024 | **0.009** | **20.42** |
-| PRQ₄ | 1024 | 0.007 | 14.06 |
-| PRQ₆ | 1024 | **0.004** | **13.56** |
+![Repository Structure](Misc/metrics.png)
+
 
 ## Repository Structure
 
