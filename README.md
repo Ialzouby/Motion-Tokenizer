@@ -2,6 +2,8 @@
 
 A comprehensive repository for training and evaluating various motion tokenization methods on human motion datasets.
 
+![Repository Structure](Misc/Motion-Tokenizer.png)
+
 ## Overview
 
 This repository implements and compares multiple motion tokenization approaches:
